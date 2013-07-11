@@ -1,1 +1,12 @@
-Hello {{ name }}!
+{% extends "BrandburyTimeZoneBundle::layout.html.twig" %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/brandburytimezone/js/TimeZonePage.js') }}"></script>
+{% endblock %}
+    
+{% block body %}
+    <div id="timeZoneInfoContainer">
+        
+        
+    </div>
+{% endblock %}

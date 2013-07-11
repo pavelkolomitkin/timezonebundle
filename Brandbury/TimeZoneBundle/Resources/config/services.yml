@@ -2,6 +2,15 @@ parameters:
 #    brandbury_time_zone.example.class: Brandbury\TimeZoneBundle\Example
 
 services:
+  brandburyTimeZone.twig.timeZoneExtention:
+    class:  Brandbury\TimeZoneBundle\Twig\TimeZoneExtention
+    arguments: ["@service_container"]
+    tags:
+      - { name: twig.extension}
+  
+  timezone:
+    class: Brandbury\TimeZoneBundle\Services\TimeZoneService
+    arguments: ["@service_container"]
 #    brandbury_time_zone.example:
 #        class: %brandbury_time_zone.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]

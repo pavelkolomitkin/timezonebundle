@@ -1,3 +1,7 @@
-brandbury_time_zone_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: BrandburyTimeZoneBundle:Default:index }
+index:
+  pattern:  /
+  defaults: { _controller: BrandburyTimeZoneBundle:Default:index }
+  
+timeZoneDetect:
+  pattern: /{timeOffset}
+  defaults: { _controller: BrandburyTimeZoneBundle:Default:detect }
